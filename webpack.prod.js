@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizerCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+
 
 module.exports = {
     mode: 'production',
@@ -46,6 +48,7 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({ 
             filename: '[name].css'
-        })
+        }),
+        new Dotenv(),
     ]
 }

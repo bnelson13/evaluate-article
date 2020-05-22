@@ -10,5 +10,6 @@ export function checkForName(inputText) {
 
     if(names.includes(inputText)) {
         alert("Welcome, Captain!")
+        //console.log(`your api key is ${process.env.API_KEY}`)
     }
 }
