@@ -1,3 +1,0 @@
-export funciton checkSentiment(data) {
-    
-}
