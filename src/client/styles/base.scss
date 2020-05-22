@@ -2,13 +2,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: rgb(238, 238, 238);
 }
 
 main {
     flex: 2;
 }
 
-section {
+.form {
     max-width: 800px;
     margin: 50px auto;
 }
