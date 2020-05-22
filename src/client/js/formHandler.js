@@ -11,4 +11,9 @@ export function handleSubmit(event) {
     .then(function(res) {
         document.getElementById('results').innerHTML = res.message;
     })
+    fetch('https://dog.ceo/api/breeds/image/random')
+    .then(res => res.json())
+    .then(function(res) {
+        document.getElementById('results2').innerHTML = res.status;
+    })
 }
