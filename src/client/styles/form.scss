@@ -18,5 +18,10 @@
     margin-left: 50%;
     transform: translateX(-50%);
     color: white;
+    outline: 0;
     background-color: rgb(28, 64, 184);
+}
+
+#nameButton:active {
+    outline: 0;
 }

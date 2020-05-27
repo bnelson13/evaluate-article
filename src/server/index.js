@@ -37,6 +37,8 @@ app.post('/aylien', function (req, res) {
         }
         console.log(aylienData);
     });
+    //aylienAPI.summarize({url: newURL}, function(err,res)
+    //aylienAPI.hashtag({url: newURL}, function(err,res)
     res.send(aylienData);
 });
 
