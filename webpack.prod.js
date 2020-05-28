@@ -6,6 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizerCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 
 module.exports = {
@@ -29,6 +30,18 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.(png)$/, 
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                        }
+                    }
+                ]
             }
         ]
     },
@@ -50,5 +63,6 @@ module.exports = {
             filename: '[name].css'
         }),
         new Dotenv(),
+        new WorkboxPlugin.GenerateSW(),
     ]
 }

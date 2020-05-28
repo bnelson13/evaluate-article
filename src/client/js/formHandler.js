@@ -22,24 +22,24 @@ export function handleSubmit (event) {
             console.log(res.subjectivity);
             switch (res.polarity) {
                 case 'negative':
-                    document.getElementById('pol-image').src = "/src/client/img/Group 3.png";
+                    document.getElementById('pol-image').src = "./src/client/img/Group3.png";
                     break;
                 case 'neutral':
-                    document.getElementById('pol-image').src = "/src/client/img/Group 1.png";
+                    document.getElementById('pol-image').src = "./src/client/img/Group1.png";
                     break;
                 case 'positive':
-                    document.getElementById('pol-image').src = "/src/client/img/Group 2.png";
+                    document.getElementById('pol-image').src = "./src/client/img/Group2.png";
                     break;
             }
             switch (res.subjectivity) {
                 case 'subjective':
-                    document.getElementById('sub-image').src = "/src/client/img/Group 5.png";
+                    document.getElementById('sub-image').src = "./src/client/img/Group5.png";
                     break;
                 case 'neutral':
-                    document.getElementById('sub-image').src = "/src/client/img/Group 4.png";
+                    document.getElementById('sub-image').src = "./src/client/img/Group4.png";
                     break;
                 case 'objective':
-                    document.getElementById('sub-image').src = "/src/client/img/Group 6.png";
+                    document.getElementById('sub-image').src = "./src/client/img/Group6.png";
                     break;
             }
         });

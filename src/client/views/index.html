@@ -4,11 +4,10 @@
         <meta charset="utf-8">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="/src/client/img/favicon/android-chrome-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/src/client/img/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/src/client/img/favicon/favicon-16x16.png">
-        <link rel="manifest" href="/src/client/img/favicon/site.webmanifest">
-        <title>NEWSCHECK</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="src/client/img/favicon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="src/client/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="src/client/img/favicon/favicon-16x16.png">
+        <title>Newscheck</title>
     </head>
 
     <body>
@@ -16,7 +15,8 @@
         <header class="header">
             <div class="logo">
                 <a href="#">
-                    <img src="/src/client/img/newscheck-logo.png" alt="Newscheck logo">
+                    <img id="logo" src='src/client/img/newscheck-logo.png' alt="Newscheck logo">
+                    <!-- "/src/client/img/newscheck-logo.png" -->
                 </a>
             </div>
             <div class="header-menu">
@@ -40,7 +40,7 @@
                 <div class="result-sub-title">
                     <h3>Polarity</h3>
                     <div class="cropped-img">
-                        <img id="pol-image" src="/src/client/img/Group 8.png" alt="">
+                        <img id="pol-image" src="src/client/img/Group8.png" alt="">
                     </div>
                 </div>
                 <div id="polarity">
@@ -50,7 +50,7 @@
                 <div class="result-sub-title">
                     <h3>Subjectivity</h3>
                     <div class="cropped-img">
-                        <img id="sub-image" src="/src/client/img/Group 7.png" alt="">
+                        <img id="sub-image" src="src/client/img/Group7.png" alt="">
                     </div>
                 </div>
                 <div id="subjectivity">
@@ -64,5 +64,19 @@
             <p>© NEWSCHECK 2020</p>
         </footer>
 
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {             
+                    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                        // Registration was successful
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, function(error) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', error);
+                     });
+                }); 
+            };
+        </script>
     </body>
 </html>
