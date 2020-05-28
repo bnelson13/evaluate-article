@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
 
-app.post('/aylien', function (req, res) {
+app.post('/aylien', function (req, response) {
     let newURL = req.body.url;
     aylienAPI.sentiment({url: newURL}, function(err,res) {
         if(err === null){
@@ -31,15 +31,11 @@ app.post('/aylien', function (req, res) {
             aylienData.polarity_confidence = res.polarity_confidence;
             aylienData.subjectivity = res.subjectivity;
             aylienData.subjectivity_confidence = res.subjectivity_confidence;
-            
+            response.send(aylienData);
         } else {
             console.log(`You encountered the following error: ${err}`)
         }
-        console.log(aylienData);
     });
-    //aylienAPI.summarize({url: newURL}, function(err,res)
-    //aylienAPI.hashtag({url: newURL}, function(err,res)
-    res.send(aylienData);
 });
 
 // designates what port the app will listen to for incoming requests

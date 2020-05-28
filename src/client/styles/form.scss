@@ -15,13 +15,21 @@
 #nameButton {
     width: 100px;
     border-radius: 16px;
+    font-size: 15px;
     margin-left: 50%;
     transform: translateX(-50%);
     color: white;
     outline: 0;
-    background-color: rgb(28, 64, 184);
+    border: 1px solid #0E5897;
+    background-color: #0E5897;
 }
 
 #nameButton:active {
     outline: 0;
+}
+
+#nameButton:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #0E5897;
 }

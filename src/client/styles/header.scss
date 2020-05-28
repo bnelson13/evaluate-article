@@ -1,5 +1,26 @@
 .header {
     display: flex;
+    color: #313a41;
     justify-content: space-between;
     padding: 10px 40px;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: large;
+    margin-top: 30px;
+}
+
+.header-menu-list {
+    display: flex;
+}
+
+.header-menu-list a {
+    color: #0E5897;
+    text-decoration: none;
+    font-size: larger;
+    margin-left: 20px;
+}
+
+.header-menu-list a:hover {
+    color: #970e33;
 }

@@ -2,17 +2,28 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/src/client/img/favicon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/src/client/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/src/client/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/src/client/img/favicon/site.webmanifest">
+        <title>NEWSCHECK</title>
     </head>
 
     <body>
 
         <header class="header">
-            <div class="">
-                Logo
+            <div class="logo">
+                <a href="#">
+                    <img src="/src/client/img/newscheck-logo.png" alt="Newscheck logo">
+                </a>
             </div>
-            <div class="">
-                navigation
+            <div class="header-menu">
+                <ul class="header-menu-list">
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>Contact</li></a>
+                </ul>
             </div>
         </header>
 
@@ -24,15 +35,33 @@
                 </form>
             <section>
 
-            <section>
-                <strong>Article Evaluation Results:</strong>
-                <div>Polarity: <span id="polarity">Negative</span> (Confidence: <span id="polarity-conf">.99</span>)</div>
-                <div>Subjectivity: <span id="subjectivity">Subjective</span> (Confidence: <span id="subjectivity-conf">.99</span>)</div>
+            <section class="resultSec">
+                <div class="result-title">Evaluation</div>
+                <div class="result-sub-title">
+                    <h3>Polarity</h3>
+                    <div class="cropped-img">
+                        <img id="pol-image" src="/src/client/img/Group 8.png" alt="">
+                    </div>
+                </div>
+                <div id="polarity">
+                    Neutral
+                </div>
+                <span class="conf-measure">Confidence level: <span id="polarity-conf"></span>%</span>
+                <div class="result-sub-title">
+                    <h3>Subjectivity</h3>
+                    <div class="cropped-img">
+                        <img id="sub-image" src="/src/client/img/Group 7.png" alt="">
+                    </div>
+                </div>
+                <div id="subjectivity">
+                    Neutral
+                </div>
+                <span class="conf-measure">Confidence level: <span id="subjectivity-conf"></span>%</span>
             </section>
         </main>
 
-        <footer>
-            <p>This is a footer</p>
+        <footer class="footer">
+            <p>© NEWSCHECK 2020</p>
         </footer>
 
     </body>
