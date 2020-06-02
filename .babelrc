@@ -1,7 +1,1 @@
-{  "presets": [
-    [ "env", {
-      "targets": {
-        "node": "8.10"
-      }
-    }]
-  ]}
+{"presets": ["@babel/preset-env"]}
