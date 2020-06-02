@@ -1,5 +1,6 @@
 import { handleSubmit } from './js/formHandler'
 import { linkCheck } from './js/linkChecker'
+import { jsonCheck } from './js/jsonChecker'
 import { logo } from './img/newscheck-logo.png'
 import { group1 } from './img/Group1.png'
 import { group2 } from './img/Group2.png'
@@ -22,6 +23,7 @@ import './styles/resets.scss'
 export {
     handleSubmit,
     linkCheck,
+    jsonCheck,
     logo,
     group1,
     group2,
