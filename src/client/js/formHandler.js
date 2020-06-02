@@ -1,3 +1,5 @@
+import 'regenerator-runtime/runtime'
+
 export async function handleSubmit (event) {
     event.preventDefault()
     const urlError = document.getElementById('urlError');
