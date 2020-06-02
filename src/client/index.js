@@ -20,6 +20,8 @@ import './styles/form.scss'
 import './styles/header.scss'
 import './styles/resets.scss'
 
+import 'regenerator-runtime/runtime'
+
 export {
     handleSubmit,
     linkCheck,
