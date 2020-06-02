@@ -38,7 +38,12 @@ app.post('/aylien', function (req, response) {
     });
 });
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8081;
+}
+
 // designates what port the app will listen to for incoming requests
-app.listen(8081, function () {
+app.listen(port, function () {
     console.log('Example app listening on port 8081!')
 })
