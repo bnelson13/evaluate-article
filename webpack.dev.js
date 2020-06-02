@@ -4,10 +4,11 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 //const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const Dotenv = require('dotenv-webpack');
+require("babel-polyfill");
 
 module.exports = {
     mode: 'development',
-    entry: './src/client/index.js',
+    entry: ["babel-polyfill", "./src/client/index.js"],
     devtool: 'source-map',
     output: {
         libraryTarget: 'var',
